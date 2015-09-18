@@ -14,6 +14,9 @@ sysdeps:
 	sudo apt-get install python-html2text python-markdown python-pip git spell ispell ibritish
 	sudo pip install mdx-anchors-away mdx-callouts mdx-foldouts
 
+sysdeps-osx:
+	sudo pip install html2text markdown2 mdx-anchors-away mdx-callouts mdx-foldouts
+
 multi:
 	tools/make_versions.sh
 
