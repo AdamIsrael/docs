@@ -1,12 +1,10 @@
-Title:  Vagrant Juju Workflow on OS X
+Title:  Vagrant Juju Workflow
 
 
-#  Vagrant Juju Workflow on OS X
+#  Vagrant Juju Workflow
 
-Running Juju on Ubuntu is a straightforward process thanks to the addition of
-the Local Provider. OS X does not support virtualization at the operating
-system level, however. The next best solution is to use a virtualization
-wrapper like [Vagrant](https://www.vagrantup.com).
+Running Juju on Ubuntu is a straightforward process thanks to the use of [LXC] via the Local Provider. Non-Linux platforms, such as OS X and Windows, do not support virtualization at the operating system level, however. The next best
+solution is to use a virtualization wrapper like [Vagrant].
 
 
 ##  Getting Started
@@ -14,15 +12,32 @@ wrapper like [Vagrant](https://www.vagrantup.com).
 Ensure the following software components are installed on your development
 machine:
 
-- [Homebrew](http://brew.sh)
-- [Vagrant](https://www.vagrantup.com)
-- [VirtualBox](https://www.virtualbox.org/)
+^# OS X
+
+  - [Homebrew](http://brew.sh)
+  - [Vagrant](https://www.vagrantup.com)
+  - [VirtualBox](https://www.virtualbox.org/)
+
+^# Windows
+  - [Vagrant](https://www.vagrantup.com)
+  - [VirtualBox](https://www.virtualbox.org/)
+
+
 
 ### Preparing to use Vagrant
 
 See [Configuring for Vagrant](./config-vagrant.html) for instructions on
 downloading and preparing your new virtual machine.
 
+### Using Vagrant
+
+```bash
+vagrant init || vagrant box add
+vagrant up
+vagrant ssh
+vagrant halt
+vagrant destroy
+```
 
 ## Writing your first charm
 
@@ -288,3 +303,6 @@ Installing Juju, for deploying to non-local environments
 
 If you encounter any issues with the Vagrant images, please
 [file a bug report](https://bugs.launchpad.net/juju-vagrant-images).
+
+[LXC]: https://linuxcontainers.org/
+[Vagrant]: https://www.vagrantup.com
