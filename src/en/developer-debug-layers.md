@@ -64,6 +64,10 @@ layer.
 
 ![ charm-layers-illustration.png](https://assets.ubuntu.com/v1/c3fa7fb7-charm-layers-illustration.png)
 
+### `charm proof` or `charm build` returns exit status 100
+
+`charm proof`, when run manually or automatically as part of the `charm build` process, may return an exit status of 100. This indicates that the static analysis of the charm structure has found potential issues and may not be compatible with [Charm Store policy](authors-charm-policy.html).
+
 ### Where do I file bugs?
 
 Bugs relating to building charms, and anything going awry with the `charm build`
